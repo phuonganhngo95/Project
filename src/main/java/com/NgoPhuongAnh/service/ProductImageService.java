@@ -35,7 +35,7 @@ public class ProductImageService {
     }
 
     public void deleteProductImage(Long id) {
-        ProductImage productImage = productImagesRepository.findById(id).orElseThrow(()->new RuntimeException("Không tìm thấy hình ảnh với id: " + id));
+        ProductImage productImage = productImagesRepository.findById(id).orElseThrow(()-> new RuntimeException("Không tìm thấy hình ảnh với id: " + id));
         productImagesRepository.delete(productImage);
     }
 
